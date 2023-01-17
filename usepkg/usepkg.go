@@ -1,8 +1,8 @@
 package usepkg
 
 import (
+	"Goproject/ch25_Search_Word/Search_Word/usepkg/custompkg"
 	"fmt"
-	"goproject/usepkg/custompkg"
 
 	"github.com/guptarohit/asciigraph"
 	"github.com/tuckersGo/musthaveGo/ch16/expkg"
