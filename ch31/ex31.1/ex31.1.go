@@ -132,6 +132,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"sort"
@@ -157,7 +158,7 @@ func MakeWebHandler() http.Handler { // ❸ 웹 서버 핸들러 생성
 	rd = render.New()
 	todoMap = make(map[int]Todo)
 	mux := mux.NewRouter()
-	mux.Handle("/", http.FileServer(http.Dir("public")))
+	mux.Handle("/", http.FileServer(http.Dir("C:/Users/남정완/GoProject/ch31/ex31.1/public")))
 	mux.HandleFunc("/todos", GetTodoListHandler).Methods("GET")
 	mux.HandleFunc("/todos", PostTodoHandler).Methods("POST")
 	mux.HandleFunc("/todos/{id:[0-9]+}", RemoveTodoHandler).Methods("DELETE")
@@ -247,4 +248,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	test_fmt := "hello"
+	fmt.Println(test_fmt)
 }
